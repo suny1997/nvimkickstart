@@ -4,4 +4,9 @@ vim.api.nvim_create_autocmd({ 'VimLeave' }, {
     vim.cmd ':silent :!im-select.exe 2052'
   end,
 })
+vim.api.nvim_create_autocmd({ 'FocusGained' }, {
+  callback = function()
+    vim.cmd ':silent :!im-select.exe 2052'
+  end,
+})
 return {}
